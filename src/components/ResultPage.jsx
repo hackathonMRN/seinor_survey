@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function ResultPage() {
   const location = useLocation();
+  const navigate = useNavigate();
   const recommendation = location.state?.recommendation || "추천 결과가 없습니다.";
   const [resultData, setResultData] = useState([]);
   const [error, setError] = useState(null);
@@ -44,6 +45,12 @@ function ResultPage() {
     fetchData();
   }, [recommendation]);
 
+  const handleRestart = () => {
+    if (window.confirm('적성에 맞는 일자리가 없습니다. 처음 질문으로 돌아가시겠습니까?')) {
+      navigate('/');
+    }
+  };
+
   return (
     <div className="App">
       <header>
@@ -51,7 +58,12 @@ function ResultPage() {
       </header>
       <main>
         {error ? (
-          <p className="error-message">{error}</p>
+          <div className="error-container">
+            <p className="error-message">{error}</p>
+            <button className="restart-button" onClick={handleRestart}>
+              처음으로 돌아가기
+            </button>
+          </div>
         ) : resultData.length > 0 ? (
           <div className="result-container">
             <h2>추천 결과</h2>
