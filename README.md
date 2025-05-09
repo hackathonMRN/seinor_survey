@@ -1,13 +1,100 @@
-# React + Vite
+📋 Senior Survey
+Senior Survey는 양산시 노인 일자리 사업 참여자들을 위한 설문 시스템입니다. 이 시스템은 다양한 일자리 유형에 대한 선호도를 파악하고, 참여자에게 적합한 일자리를 추천하는 것을 목표로 합니다.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📌 프로젝트 개요
 
-## Expanding the ESLint configuration
+프로젝트명: Senior Survey
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# react
+목표: 노인 일자리 참여자들의 선호도 조사를 통해 맞춤형 일자리 추천 제공
+
+
+
+
+[주요 기능]
+
+설문 데이터 수집 및 분석
+
+일자리 유형 분류 및 매칭
+
+
+
+
+🛠️ 기술 스택
+
+프론트엔드: HTML, CSS, JavaScript
+
+백엔드: Node.js, Express
+
+
+
+
+
+📊 설문 흐름도
+
+일자리 선호도 설문 진행
+
+설문 결과 분석
+
+적합한 일자리 유형 추천
+
+
+
+
+
+🤝 기여 방법
+이슈를 통해 버그 제보 또는 기능 제안
+
+포크 후 새로운 브랜치 생성
+
+변경 사항 커밋 및 푸시
+
+풀 리퀘스트 생성
+
+------------------------------
+
+
+# React + Vite 프로젝트
+
+이 프로젝트는 React와 Vite를 사용하여 개발된 웹 애플리케이션입니다.
+
+## 실행 방법
+
+### 1. 의존성 설치
+
+프로젝트 루트 디렉토리에서 다음 명령어를 실행하세요.
+
+```bash
+npm install
+```
+
+### 2. 개발 서버 실행 (프론트엔드)
+
+프론트엔드 개발 서버를 실행하려면:
+
+```bash
+npm run dev
+```
+
+- 기본적으로 [http://localhost:5173](http://localhost:5173)에서 실행됩니다.
+
+### 3. 빌드 및 백엔드 서버 실행
+
+프로덕션 빌드 후 Express 서버로 정적 파일과 API를 제공하려면:
+
+```bash
+npm run build
+npm run server
+```
+
+- 또는 한 번에 실행하려면:
+  ```bash
+  npm start
+  ```
+- 서버는 기본적으로 [http://localhost:3000](http://localhost:3000)에서 실행됩니다.
+
+## 기타
+
+- API 엔드포인트: `/api/image-text-pairs`
+- 정적 파일: `dist` 폴더에서 제공
