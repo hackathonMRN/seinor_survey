@@ -23,8 +23,19 @@
   flex-wrap: wrap;
   gap: 10px; /* 버튼 간 간격 설정 */
   margin-top: 3rem;
+  width: 20rem;
 }
-
+.title{
+  padding: 0 ;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333; /* 제목 색상 */
+    text-align:justify; /* 제목 중앙 정렬 */
+  word-spacing: -0.01rem; /* 단어 간격 정 */
+  width: 19.5rem;
+  letter-spacing: -0.0009rem; /* 글자 간격 정 */
+}
 .card {
   background: white;
   border-radius: 20px;
