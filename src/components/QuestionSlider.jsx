@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../style/home.module.css'; // CSS Module 방식으로 불러옴
-
+import styles from '../style/home.module.css';
 const QuestionSlider = () => {
   const questions = [
     "오늘 기분이 좋으신가요?",
@@ -23,7 +22,7 @@ const QuestionSlider = () => {
       <h2 className={styles.title}>{questions[currentQuestionIndex]}</h2> {/* CSS Module 방식으로 수정 */}
       <div className={styles.grid}> {/* CSS Module 방식으로 수정 */}
         <button className={styles.option} onClick={handleNext}>예</button> {/* CSS Module 방식으로 수정 */}
-        <button className={styles.option} onClick={handleNext}>아니오</button> {/* CSS Module 방식으로 수정 */}
+        <button className={styles.option1} onClick={handleNext}>아니오</button> {/* CSS Module 방식으로 수정 */}
       </div>
     </div>
   );

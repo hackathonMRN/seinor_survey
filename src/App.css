@@ -2,14 +2,23 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
-
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 1rem;
+}
 body {
+  
   margin: 0;
   background-color: #f8f9fa;
   color: #333;
 }
 
 .container {
+
   max-width: 400px;
   margin: 0 auto;
   padding: 2rem 1rem;
