@@ -51,3 +51,50 @@ Senior Survey는 양산시 노인 일자리 사업 참여자들을 위한 설문
 변경 사항 커밋 및 푸시
 
 풀 리퀘스트 생성
+
+------------------------------
+
+
+# React + Vite 프로젝트
+
+이 프로젝트는 React와 Vite를 사용하여 개발된 웹 애플리케이션입니다.
+
+## 실행 방법
+
+### 1. 의존성 설치
+
+프로젝트 루트 디렉토리에서 다음 명령어를 실행하세요.
+
+```bash
+npm install
+```
+
+### 2. 개발 서버 실행 (프론트엔드)
+
+프론트엔드 개발 서버를 실행하려면:
+
+```bash
+npm run dev
+```
+
+- 기본적으로 [http://localhost:5173](http://localhost:5173)에서 실행됩니다.
+
+### 3. 빌드 및 백엔드 서버 실행
+
+프로덕션 빌드 후 Express 서버로 정적 파일과 API를 제공하려면:
+
+```bash
+npm run build
+npm run server
+```
+
+- 또는 한 번에 실행하려면:
+  ```bash
+  npm start
+  ```
+- 서버는 기본적으로 [http://localhost:3000](http://localhost:3000)에서 실행됩니다.
+
+## 기타
+
+- API 엔드포인트: `/api/image-text-pairs`
+- 정적 파일: `dist` 폴더에서 제공
