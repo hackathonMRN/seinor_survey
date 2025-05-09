@@ -1,18 +1,19 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import QuestionSlider from './components/QuestionSlider';
-import './App.css'; // 스타일링 필요 시
+import ResultPage from './components/ResultPage';
+import QuestionPage from './components/QuestionPage';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <h1>질문에 답해주세요</h1>
-       
-      </header>
-      <main>
-        <QuestionSlider />
-      </main>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<QuestionPage />} /> {/* QuestionPage 컴포넌트 사용 */}
+        <Route path="/slider" element={<QuestionSlider />} /> {/* QuestionSlider 컴포넌트 사용 */}
+        <Route path="/result" element={<ResultPage />} /> {/* ResultPage 컴포넌트 사용 */}
+      </Routes>
+    </Router>
   );
 }
 
