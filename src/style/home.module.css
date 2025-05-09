@@ -16,6 +16,8 @@
   align-items: center;
 }
 
+
+
 .grid {
   display: flex;
   align-items: center;
@@ -115,4 +117,11 @@
 .resultButton:hover {
   background-color: #1c49db; /* hover 시 더 어두운 초록색 */
   transform: scale(1.05); /* hover 시 약간 확대 */
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1rem;
+  text-align: center;
 }
