@@ -46,7 +46,11 @@ function ResultPage() {
   }, [recommendation]);
 
   const handleRestart = () => {
-    if (window.confirm('적성에 맞는 일자리가 없습니다. 처음 질문으로 돌아가시겠습니까?')) {
+    const message = error ? 
+      '적성에 맞는 일자리가 없습니다. 처음으로 돌아가시겠습니까?' : 
+      '처음으로 돌아가시겠습니까?';
+      
+    if (window.confirm(message)) {
       navigate('/');
     }
   };
@@ -79,6 +83,9 @@ function ResultPage() {
                 </div>
               ))}
             </div>
+            <button className="restart-button" onClick={handleRestart}>
+              처음 질문으로 돌아가기
+            </button>
           </div>
         ) : (
           <p>추천 결과를 불러오는 중...</p>

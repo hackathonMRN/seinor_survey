@@ -16,17 +16,15 @@
   align-items: center;
 }
 
-
-
 .grid {
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px; /* 버튼 간 간격 설정 */
-  margin-top: 3rem;
-  width: 20rem;
+  gap: 1rem;
+  /* 버튼 간 간격 */
+  flex-wrap: nowrap;
+  /* 한 줄에 강제로 유지 */
 }
+
 .title {
   padding: 0;
   font-size: 2rem;
@@ -58,29 +56,32 @@
   font-size: 2rem; /* 질문 텍스트 크기 증가 */
 }
 
-.option {
-  display: block;
-  padding: 1.5rem 3rem; /* 버튼 크기 증가 */
-  font-size: 1.5rem; /* 버튼 텍스트 크기 증가 */
-  border: 1px solid #28a745; /* 초록색 테두리 */
-  border-radius: 10px;
-  background-color: #28a745; /* 기본 초록색 배경 */
-  color: white;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
+.option,
 .option1 {
-  display: block;
-  padding: 1.5rem 1.9rem;
-  font-size: 1.5rem;
-  border: 1px solid red; /* 빨간색 테두리 */
+  display: inline-block;
+  padding: 1rem 2rem;
+  /* / 패딩을 줄여서 크기 축소 / */
+  font-size: 1.3rem;
+  /* / 텍스트 크기도 약간 줄임 / */
   border-radius: 10px;
-  background-color: red; /* 빨간색 배경 */
   color: white;
   cursor: pointer;
   text-align: center;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 160px;
+  /* / 버튼 최소 너비도 살짝 줄임 */ 
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.option {
+  border: 1px solid #28a745;
+  background-color: #28a745;
+}
+
+.option1 {
+  border: 1px solid red;
+  background-color: red;
 }
 
 .option1:hover {
